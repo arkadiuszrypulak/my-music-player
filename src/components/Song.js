@@ -1,13 +1,13 @@
 import React from "react";
 //styles
-import { SongWrapper } from '../styles/Song.styles';
+import { SongWrapper } from "../styles/Song.styles";
 
-const Song = () => {
+const Song = ({ currentSong }) => {
   return (
     <SongWrapper>
-      <h1>Song</h1>
-      <h1>Song name</h1>
-      <h1>Artist</h1>
+      <img src={currentSong.cover} alt={currentSong.name}></img>
+      <h2>{currentSong.name}</h2>
+      <h3>{currentSong.artist}</h3>
     </SongWrapper>
   );
 };
